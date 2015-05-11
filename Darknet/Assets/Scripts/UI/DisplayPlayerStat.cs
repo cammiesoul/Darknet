@@ -7,12 +7,12 @@ using System.Collections.Generic;
 public class DisplayPlayerStat : MonoBehaviour {
 
 	//[SerializeField] public Actor actor;
-	private Player player;
+	private GameObject player;
 	[SerializeField] public Slider bar=null;
 	[SerializeField] public Text label;
 	[SerializeField] public string attribute;
 	[SerializeField] public string attributeMax = "";
-	[SerializeField] public string name = "";
+	[SerializeField] public string statName = "";
 	private int value, valueMax;
 	private string cache;
 
@@ -27,10 +27,14 @@ public class DisplayPlayerStat : MonoBehaviour {
 	void Update () {
 		//player = GameObject.FindWithTag ("Player");
 		//Actor actor = player.GetComponent<Actor> ();
-		player = GameObject.FindWithTag ("Player").GetComponent<Player> ();
+		player = GameObject.FindWithTag ("Player");
 
-		if (player == null || label == null){
-			Debug.Log ("No player/label.");
+		if (player == null){
+			Debug.Log ("No player.");
+			return;
+		}
+		if (label == null){
+			Debug.Log ("No label.");
 			return;
 		}
 
@@ -38,10 +42,10 @@ public class DisplayPlayerStat : MonoBehaviour {
 
 
 			if(attribute != "")
-				value = player.GetComponent<Actor>().getAttribute(attribute);
+				value = player.GetComponent<Player>().getAttribute(attribute);
 
 			if(attributeMax != "")
-				valueMax = player.GetComponent<Actor>().getAttribute(attributeMax);
+				valueMax = player.GetComponent<Player>().getAttribute(attributeMax);
 				
 
 
@@ -49,8 +53,8 @@ public class DisplayPlayerStat : MonoBehaviour {
 				bar.value = ((float) value) / ((float) valueMax);
 
 			cache = "";
-			if (name != "")
-				cache += name + ": ";
+			if (statName != "")
+				cache += statName + ": ";
 
 			if (label != null)
 				cache += value.ToString();
