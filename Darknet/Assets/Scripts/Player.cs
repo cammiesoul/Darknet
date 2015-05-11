@@ -190,13 +190,13 @@ public class Player : Photon.MonoBehaviour {
 
 	public int getAttribute (string name){
 		if (name == "hp")
-			return HP;
+			return currentHealth;
 		else if (name == "hpmax")
-			return baseHP;
+			return HP;
 		else if (name == "mp")
-			return MP;
+			return currentMana;
 		else if (name == "mpmax")
-			return baseMP;
+			return MP;
 		else if (name == "exp")
 			return currentEXP;
 		else if (name == "expmax")

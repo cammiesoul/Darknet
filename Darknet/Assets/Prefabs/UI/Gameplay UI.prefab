@@ -634,7 +634,6 @@ GameObject:
   - 223: {fileID: 22393210}
   - 114: {fileID: 11492900}
   - 114: {fileID: 11492902}
-  - 114: {fileID: 11482056}
   m_Layer: 5
   m_Name: Gameplay UI
   m_TagString: UI
@@ -2414,22 +2413,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'HP:'
---- !u!114 &11482056
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 193010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e267d9d436db7484389bf43d0221f6c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bar: {fileID: 0}
-  label: {fileID: 0}
-  attribute: 
-  attributeMax: 
-  name: 
 --- !u!114 &11482058
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2445,7 +2428,7 @@ MonoBehaviour:
   label: {fileID: 11482054}
   attribute: hpmax
   attributeMax: 
-  name: HP
+  statName: 
 --- !u!114 &11482060
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2461,7 +2444,7 @@ MonoBehaviour:
   label: {fileID: 11482054}
   attribute: hpmax
   attributeMax: 
-  name: 
+  statName: 
 --- !u!114 &11492810
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3800,7 +3783,7 @@ MonoBehaviour:
   label: {fileID: 11492924}
   attribute: inv
   attributeMax: invmax
-  name: 
+  statName: 
 --- !u!114 &11492924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4151,7 +4134,7 @@ MonoBehaviour:
   label: {fileID: 11492846}
   attribute: exp
   attributeMax: expmax
-  name: 
+  statName: 
 --- !u!114 &11492946
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4297,7 +4280,7 @@ MonoBehaviour:
   label: {fileID: 11492878}
   attribute: hp
   attributeMax: hpmax
-  name: 
+  statName: 
 --- !u!114 &11492958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4422,7 +4405,7 @@ MonoBehaviour:
   label: {fileID: 11492848}
   attribute: mp
   attributeMax: mpmax
-  name: 
+  statName: 
 --- !u!114 &11492968
 MonoBehaviour:
   m_ObjectHideFlags: 1
