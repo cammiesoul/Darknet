@@ -235,6 +235,8 @@ namespace UnityEngine.UI
 		}
 
 		void Update (){
+			//if (! this.GetComponent<Icon> ()) {
+			//}
 
 
 		}
